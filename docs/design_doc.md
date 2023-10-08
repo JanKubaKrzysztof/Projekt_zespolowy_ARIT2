@@ -15,7 +15,7 @@ Używająć frameworka do javascriptu ANGULAR połączyć się z zewnętrzynm AP
 
 *What*
 
-...
+SKLEP INTERENTOWY z api.
 
 ## Goals and Non-Goals
 Umożliwić filtrowanie po:
@@ -29,20 +29,20 @@ ILOŚCI
 
 ## Proposed solution
 
-Starting with high-level design, arch diagrams, screenshots, mockups,... 
+Używająć frameowrka angular i bootstrap stworzyć frontend, który będzie strzelał do api: https://fakestoreapi.com/ i wyświetlał produkty, które będzie można filtrować.
 
-...
-
-You might here also touch things, such as testing.
 
 ## Other options
 
-Discarded alternatives.
+Dodać sortowanie, własny backend.
 
 ...
 
 ## Open Questions
 
-Czy stworzyć logowanie do sklepu?
+Czy stworzyć logowanie do sklepu? Stworzyć CI / CD?
 
 ## References
+
+API:
+https://fakestoreapi.com/

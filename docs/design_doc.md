@@ -6,6 +6,7 @@ Created at: 08.10.2023
 ## Intro
 
 *Why/Problem*
+
 Stworzyć sklep Interentowy z wykorzystaniem API.
 
 *How*

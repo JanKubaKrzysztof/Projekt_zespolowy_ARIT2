@@ -43,6 +43,6 @@ Discarded alternatives.
 
 ## Open Questions
 
-...
+Czy stworzyć logowanie do sklepu?
 
 ## References

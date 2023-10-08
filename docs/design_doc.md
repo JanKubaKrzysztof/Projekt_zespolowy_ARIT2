@@ -10,6 +10,7 @@ Created at: 08.10.2023
 Stworzyć sklep Interentowy z wykorzystaniem API.
 
 *How*:
+
 Używająć frameworka do javascriptu ANGULAR połączyć się z zewnętrzynm API, który umożliwi wyświetlenie produktów.
 
 *What*

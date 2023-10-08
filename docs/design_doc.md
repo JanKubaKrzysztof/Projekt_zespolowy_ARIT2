@@ -18,6 +18,12 @@ Używająć frameworka do javascriptu ANGULAR połączyć się z zewnętrzynm AP
 ...
 
 ## Goals and Non-Goals
+- Umożliwić filtrowanie po:
+CENIE
+KATEGORII
+OCENIE
+ILOŚCI
+
 
 ...
 

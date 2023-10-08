@@ -13,5 +13,5 @@ Wybierzemy odpowiednią technologię fo budowy aplikacji, na przykład angular o
 *Testowanie:*
 Regularnie będziemy testować aplikację, by upewnić się, że wszystkie funkcje działają poprawnie i bez błędów
 
-#Co?
+# Co?
 Aplikacja będzie oferować intuicyjny interfejs użytkownika, umożliwiający przeglądanie różnych kategorii produktów oraz dodawanie ich do koszyka. Dodatkowo warto rozważyć dodanie funkcji recenzji i ocen produktów, co może pomóc klientom w podejmowaniu decyzji zakupowych.

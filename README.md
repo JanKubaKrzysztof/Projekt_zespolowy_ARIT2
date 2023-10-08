@@ -1,9 +1,9 @@
-##SKLEP INTERNETOWY
+## SKLEP INTERNETOWY
 
-#Dlaczego?
+# Dlaczego?
 Aplikacja sklepu internetowego może rozwiązać wiele problemów. Może sprawić, że produkty będą bardziej dostępne dla klientów, uprościć proces zakupów, zapewnić wygodę zakupów online i umożliwić sprzedawcom dotarcie do większej liczby klientów. Dzięki aplikacji internetowej użytkownicy mogą wygodnie przeglądać produkty, składać zamówienia i śledzić ich status bez konieczności wychodzenia z domu.
 
-#Jak?
+# Jak?
 *Projektowanie Interfejsu:*
 Rozpoczniemy od zaprojektowania intuicyjnego i estetycznego interfejsu użytkownika (UI), który będzie łatwy do nawigacji dla użytkowników
 

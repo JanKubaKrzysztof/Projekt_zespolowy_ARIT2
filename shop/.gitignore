@@ -42,3 +42,4 @@ testem.log
 Thumbs.db
 
 src/app/enviroment
+!/src/enviroment/enviroment.ts

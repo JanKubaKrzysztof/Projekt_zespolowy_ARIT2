@@ -10,19 +10,32 @@ import {Router} from "@angular/router";
 export class AuthenticationComponent {
   email: string = '';
   password: string = '';
+  IsLogin: boolean = false;
 
   constructor(private auth: AuthService, private router: Router) {
-
-
   }
 
 
+  isLoginToggle(value: boolean){
+    this.IsLogin = value;
+  }
+
   onSubmit() {
-    this.auth.signUp(this.email, this.password).then(() => {
-      this.router.navigate(['/'])
-    })
-    .catch((error) => {
-      console.error('Error registering:', error);
-    });;
+    if (this.IsLogin){
+      this.auth.signIn(this.email, this.password).then(() => {
+        this.router.navigate(['/'])
+      })
+      .catch((error) => {
+        console.error('Error registering:', error);
+      });;
+    } else {
+      this.auth.signUp(this.email, this.password).then(() => {
+        this.router.navigate(['/'])
+      })
+      .catch((error) => {
+        console.error('Error registering:', error);
+      });;
+    }
+
   }
 }

@@ -25,8 +25,8 @@ export class ShopComponent {
       }
     });
 
-    this.fakeShopService.getAllProducts().subscribe(() => {
-      t;
+    this.fakeShopService.getAllProducts().subscribe((respone) => {
+      this.products = respone;
     });
   }
 }

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Product } from '../interface/interface';
 
 @Component({
   selector: 'app-shopping-cards',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./shopping-cards.component.css'],
 })
 export class ShoppingCardsComponent {
+  @Input() product: Product;
   constructor() {}
 }

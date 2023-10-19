@@ -10,6 +10,6 @@ export class FakeShopHttpRequestService {
   constructor(private http: HttpClient) {}
 
   getAllProducts(): Observable<Product[]> {
-    return this.http.get<Product[]>('https://api.example.com/data');
+    return this.http.get<Product[]>('https://fakestoreapi.com/products');
   }
 }

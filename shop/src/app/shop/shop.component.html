@@ -1,5 +1,9 @@
 <div class="container">
   <div class="row">
-    <app-shopping-cards></app-shopping-cards>
+    <app-shopping-cards
+      class="col-sm-4 d-flex flex-fill mt-3"
+      *ngFor="let product of products; index as i"
+      [product]="product"
+    ></app-shopping-cards>
   </div>
 </div>

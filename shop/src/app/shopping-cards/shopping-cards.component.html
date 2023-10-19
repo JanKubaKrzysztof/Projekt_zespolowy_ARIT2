@@ -12,12 +12,13 @@
     </p>
     <div class="d-flex justify-content-center mt-auto">
       <a href="#" class="btn btn-primary"
-        ><i class="bi bi-cart"></i> Add Product</a
+        ><i class="bi bi-cart"></i> Dodaj produkt</a
       >
     </div>
   </div>
   <div class="card-footer">
-    Rate:
+    Cena: {{product.price}} zł<br/>
+    Opinie:
     <i
       class="bi bi-star-fill text-warning"
       *ngFor="
@@ -26,6 +27,6 @@
       "
     ></i
     ><br />
-    Count: {{ product.rating.count }}
+    Ilości opinii: {{ product.rating.count }}
   </div>
 </div>

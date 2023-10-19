@@ -1,5 +1,51 @@
 <div class="container">
-  <div class="row">
+  <div class="row justify-content-center">
+
+    <form class="mt-4 col-sm-9" (submit)="onSubmit()">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6">
+            <label for="category">Kategoria:</label>
+            <select class="form-control" id="category" name="category"
+                    [(ngModel)]="selectedCategory">
+              <option *ngFor="let category of categories" [value]="category.value">{{category.name}}</option>
+            </select>
+          </div>
+
+          <div class="col-sm-6">
+            <label for="category">Mimalna ocena:</label>
+            <select class="form-control" id="ratings" name="ratings" [(ngModel)]="selectedRating">
+              <option value="1">1 Gwiazdka</option>
+              <option value="2">2 Gwiazdki</option>
+              <option value="3">3 Gwiazdki</option>
+              <option value="4">4 Gwiazdki</option>
+              <option value="5">5 Gwiazdek</option>
+            </select>
+          </div>
+
+
+          <div class="col-sm-6">
+            <label for="priceFrom">Cena od:</label>
+            <input type="number" class="form-control" id="priceFrom" name="priceFrom"
+                   [(ngModel)]="priceFrom">
+
+          </div>
+
+          <div class="col-sm-6">
+            <label for="priceTo">Cena do:</label>
+            <input type="number" class="form-control" id="priceTo" name="priceTo"
+                   [(ngModel)]="priceTo">
+          </div>
+
+          <div class="col-sm-1">
+            <button type="submit" class="btn btn-primary mt-1">Search</button>
+          </div>
+
+        </div>
+      </div>
+    </form>
+
+
     <app-shopping-cards
       class="col-sm-4 d-flex flex-fill mt-3"
       *ngFor="let product of products; index as i"

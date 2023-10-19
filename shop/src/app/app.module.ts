@@ -4,7 +4,7 @@ import { AppComponent } from './app.component';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule } from '@angular/router';
 import { environment } from '../enviroment/enviroment';
 import { AppRoutingModule } from './app-routing.module';
 import { AuthenticationComponent } from './authentication/authentication.component';

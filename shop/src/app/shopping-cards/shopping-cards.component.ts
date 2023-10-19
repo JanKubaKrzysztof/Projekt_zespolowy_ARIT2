@@ -8,5 +8,10 @@ import { Product } from '../interface/interface';
 })
 export class ShoppingCardsComponent {
   @Input() product: Product;
+
   constructor() {}
+
+  calculate(x: number) {
+    return Math.round(x);
+  }
 }

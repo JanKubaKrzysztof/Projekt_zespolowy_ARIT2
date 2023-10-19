@@ -1,20 +1,31 @@
-<div class="card">
+<div class="card d-flex flex-column">
   <img
     class="card-img-top"
     [src]="product.image"
     alt="Card image cap"
     height="320"
   />
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
+  <div class="card-body d-flex flex-column">
+    <h5 class="card-title">{{ product.title }}</h5>
     <p class="card-text">
-      Some quick example text to build on the card title and make up the bulk of
-      the card's content.
+      {{ product.description }}
     </p>
-    <div class="d-flex justify-content-center">
+    <div class="d-flex justify-content-center mt-auto">
       <a href="#" class="btn btn-primary"
         ><i class="bi bi-cart"></i> Add Product</a
       >
     </div>
+  </div>
+  <div class="card-footer">
+    Rate:
+    <i
+      class="bi bi-star-fill text-warning"
+      *ngFor="
+        let in of [].constructor(calculate(product.rating.rate));
+        let i = index
+      "
+    ></i
+    ><br />
+    Count: {{ product.rating.count }}
   </div>
 </div>

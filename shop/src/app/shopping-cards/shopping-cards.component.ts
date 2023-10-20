@@ -8,14 +8,13 @@ import { Product } from '../interface/interface';
 })
 export class ShoppingCardsComponent {
   @Input() product: Product;
-  @Output() newItemEvent = new EventEmitter<number>();
-
-  NumberOfProducts = 0;
+  @Input() selectedProduct: boolean;
+  @Output() newItemEvent = new EventEmitter<Product>();
 
   constructor() {}
 
-  addProduct() {
-    this.newItemEvent.emit();
+  addProduct(product : Product) {
+    this.newItemEvent.emit(product);
   }
 
   calculate(x: number) {

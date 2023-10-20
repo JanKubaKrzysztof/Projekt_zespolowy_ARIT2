@@ -12,6 +12,7 @@ import { ShopComponent } from './shop/shop.component';
 import { FormsModule } from '@angular/forms';
 import { ShoppingCardsComponent } from './shopping-cards/shopping-cards.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    ModalModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent],

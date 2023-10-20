@@ -10,8 +10,8 @@
     <p class="card-text">
       {{ product.description }}
     </p>
-    <div class="d-flex justify-content-center mt-auto">
-      <a class="btn btn-primary" (click)="addProduct()"
+    <div class="d-flex justify-content-center mt-auto" *ngIf="!selectedProduct">
+      <a class="btn btn-primary"  (click)="addProduct(product)"
         ><i class="bi bi-cart"></i> Dodaj produkt</a
       >
     </div>

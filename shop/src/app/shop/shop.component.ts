@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import {Component, TemplateRef} from '@angular/core';
 import { AuthService } from '../../service/auth.service';
 import { Router } from '@angular/router';
 import { FakeShopHttpRequestService } from '../../service/fake-shop-http-request.service';
 import { Product } from '../interface/interface';
+import {BsModalRef, BsModalService} from "ngx-bootstrap/modal";
 
 @Component({
   selector: 'app-shop',
@@ -11,6 +12,7 @@ import { Product } from '../interface/interface';
 })
 export class ShopComponent {
   isLoggedIn = false;
+  modalRef?: BsModalRef;
   products: Product[];
   selectedCategory: string = '';
   priceFrom: number | null = null;
@@ -30,11 +32,12 @@ export class ShopComponent {
     },
   ];
 
-  numberOfProducts = 0;
+  selectedProducts: Product[] = [];
   constructor(
     private authService: AuthService,
     private router: Router,
     private fakeShopService: FakeShopHttpRequestService,
+    private modalService: BsModalService
   ) {
     this.authService.isUserLoggedIn().subscribe((user) => {
       this.isLoggedIn = !!user; // Update the value based on the authentication state
@@ -72,7 +75,11 @@ export class ShopComponent {
       });
   }
 
-  receivedNumberOfProducts() {
-    this.numberOfProducts++;
+  receivedNumberOfProducts(product: Product) {
+    this.selectedProducts.push(product);
+  }
+
+  openModal(template: TemplateRef<any>) {
+    this.modalRef = this.modalService.show(template);
   }
 }

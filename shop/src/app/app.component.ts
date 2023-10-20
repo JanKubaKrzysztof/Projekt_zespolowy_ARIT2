@@ -16,7 +16,6 @@ export class AppComponent {
     private router: Router,
   ) {
     this.authService.isUserLoggedIn().subscribe((user) => {
-      console.log(user);
       this.user = user as User;
     });
   }

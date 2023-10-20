@@ -14,7 +14,9 @@ export class FakeShopHttpRequestService {
   }
 
   getProductsByCategory(category: string): Observable<Product[]> {
-    const searchCategory = category ?  `/category/${category}` : '';
-    return this.http.get<Product[]>(`https://fakestoreapi.com/products${searchCategory}`);
+    const searchCategory = category ? `/category/${category}` : '';
+    return this.http.get<Product[]>(
+      `https://fakestoreapi.com/products${searchCategory}`,
+    );
   }
 }

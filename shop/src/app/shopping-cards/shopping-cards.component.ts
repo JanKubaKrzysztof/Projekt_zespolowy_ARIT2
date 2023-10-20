@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Product } from '../interface/interface';
 
 @Component({
@@ -8,8 +8,15 @@ import { Product } from '../interface/interface';
 })
 export class ShoppingCardsComponent {
   @Input() product: Product;
+  @Output() newItemEvent = new EventEmitter<number>();
+
+  NumberOfProducts = 0;
 
   constructor() {}
+
+  addProduct() {
+    this.newItemEvent.emit();
+  }
 
   calculate(x: number) {
     return Math.round(x);

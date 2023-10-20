@@ -1,8 +1,8 @@
-import {Component} from '@angular/core';
-import {AuthService} from '../../service/auth.service';
-import {Router} from '@angular/router';
-import {FakeShopHttpRequestService} from '../../service/fake-shop-http-request.service';
-import {Product} from '../interface/interface';
+import { Component } from '@angular/core';
+import { AuthService } from '../../service/auth.service';
+import { Router } from '@angular/router';
+import { FakeShopHttpRequestService } from '../../service/fake-shop-http-request.service';
+import { Product } from '../interface/interface';
 
 @Component({
   selector: 'app-shop',
@@ -16,14 +16,21 @@ export class ShopComponent {
   priceFrom: number | null = null;
   priceTo: number | null = null;
   selectedRating: string = '';
-  categories = [{value: "", name: "każda"}, {value: "jewelery", name: "biżuteria"}, {value: "electronics", name: "elektronika"}, {
-    value: "men's clothing",
-    name: "ubrania męskie"
-  }, {
-    value: "women's clothing",
-    name: "ubrania kobiece"
-  },];
+  categories = [
+    { value: '', name: 'każda' },
+    { value: 'jewelery', name: 'biżuteria' },
+    { value: 'electronics', name: 'elektronika' },
+    {
+      value: "men's clothing",
+      name: 'ubrania męskie',
+    },
+    {
+      value: "women's clothing",
+      name: 'ubrania kobiece',
+    },
+  ];
 
+  numberOfProducts = 0;
   constructor(
     private authService: AuthService,
     private router: Router,
@@ -41,23 +48,31 @@ export class ShopComponent {
     });
   }
 
-  onSubmit(){
-    this.fakeShopService.getProductsByCategory(this.selectedCategory)
-    .subscribe((response) => {
-      this.products = response
+  onSubmit() {
+    this.fakeShopService
+      .getProductsByCategory(this.selectedCategory)
+      .subscribe((response) => {
+        this.products = response;
 
-      if (this.priceFrom){
-        this.products = this.products.filter((e) => e.price >= this.priceFrom! )
-      }
+        if (this.priceFrom) {
+          this.products = this.products.filter(
+            (e) => e.price >= this.priceFrom!,
+          );
+        }
 
-      if (this.priceTo){
-        this.products = this.products.filter((e) => e.price <= this.priceTo! )
-      }
+        if (this.priceTo) {
+          this.products = this.products.filter((e) => e.price <= this.priceTo!);
+        }
 
-      if (this.selectedRating){
-        this.products = this.products.filter((e) => Math.round(e.rating.rate)  >= +this.selectedRating! )
-      }
+        if (this.selectedRating) {
+          this.products = this.products.filter(
+            (e) => Math.round(e.rating.rate) >= +this.selectedRating!,
+          );
+        }
+      });
+  }
 
-    });
+  receivedNumberOfProducts() {
+    this.numberOfProducts++;
   }
 }

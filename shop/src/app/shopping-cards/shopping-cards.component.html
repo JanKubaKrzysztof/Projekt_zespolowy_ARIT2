@@ -11,13 +11,13 @@
       {{ product.description }}
     </p>
     <div class="d-flex justify-content-center mt-auto">
-      <a href="#" class="btn btn-primary"
+      <a class="btn btn-primary" (click)="addProduct()"
         ><i class="bi bi-cart"></i> Dodaj produkt</a
       >
     </div>
   </div>
   <div class="card-footer">
-    Cena: {{product.price}} zł<br/>
+    Cena: {{ product.price }} zł<br />
     Opinie:
     <i
       class="bi bi-star-fill text-warning"

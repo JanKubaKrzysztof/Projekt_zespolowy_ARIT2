@@ -27,5 +27,5 @@ jobs:
    
       - name: Build Angular App
         run: |
-          cd shop ; ng build
+          cd shop ; npm install ;  ng build
   

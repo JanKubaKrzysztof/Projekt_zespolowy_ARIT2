@@ -19,12 +19,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
         
-      - name: Go to workspace directory
-        run: cd shop 
-        
       - name: Install dependencies
         run: npm install -g @angular/cli
    
       - name: Build Angular App
         run: |
-          npm install ;  ng build
+          cd shop ; npm install ;  ng build

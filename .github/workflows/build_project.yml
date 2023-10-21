@@ -35,10 +35,10 @@ jobs:
       - run: npm install -g @angular/cli
       
       - name: Build Angular App
-      - run: ng build
+        run: ng build
   
       - name: Run tests
-      - run: ng test
+        run: ng test
   
       - name: Run e2e tests
-      - run: ng e2e
+        run: ng e2e

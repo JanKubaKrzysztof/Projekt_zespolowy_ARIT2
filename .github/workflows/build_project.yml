@@ -20,7 +20,7 @@ jobs:
         uses: actions/checkout@v3
         
       - name: Go to workspace directory
-        run: ls  
+        run: cd shop 
         
       - name: Install dependencies
         run: npm install -g @angular/cli

@@ -20,7 +20,7 @@ jobs:
         uses: actions/checkout@v3
         
       - name: Go to workspace directory
-        run: cd /home/runner/work/Projekt_zespolowy_ARIT2/Projekt_zespolowy_ARIT2/shop  
+        run: ls  
         
       - name: Install dependencies
         run: npm install -g @angular/cli

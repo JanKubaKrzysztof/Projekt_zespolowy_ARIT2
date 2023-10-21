@@ -21,6 +21,9 @@ jobs:
         
       - name: Install dependencies
         run: npm install -g @angular/cli
+
+      - name: Go to workspace directory
+        run: cd shop
       
       - name: Build Angular App
         run: ng build

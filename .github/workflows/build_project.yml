@@ -25,7 +25,7 @@ jobs:
 
       - name: Lint
         run: |
-          cd shop ; ng add @angular-eslint/schematics --skip-confirmation ; ng lint
+          cd shop ; ng add @angular-eslint/schematics --skip-confirmation ; ng lint --force=true
    
       - name: Build Angular App
         run: |

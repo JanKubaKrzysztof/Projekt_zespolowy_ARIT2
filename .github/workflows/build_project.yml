@@ -21,7 +21,7 @@ jobs:
         
       - name: Install dependencies
         run: |
-          cd shop ; npm install
+          cd shop ; npm install ; npm install -g @angular/cli
 
       - name: Lint
         run: |

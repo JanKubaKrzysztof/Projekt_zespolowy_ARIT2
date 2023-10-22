@@ -25,7 +25,7 @@ jobs:
 
       - name: Lint
         run: |
-          ng add @angular-eslint/schematics ; ng lint
+          cd shop ; ng add @angular-eslint/schematics ; ng lint
    
       - name: Build Angular App
         run: |

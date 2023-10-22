@@ -20,11 +20,12 @@ jobs:
         uses: actions/checkout@v3
         
       - name: Install dependencies
-        run: npm install
+        run: |
+          cd shop ; npm install
 
       - name: Lint
         run: |
-           cd shop ; ng add @angular-eslint/schematics ; ng lint
+          ng add @angular-eslint/schematics ; ng lint
    
       - name: Build Angular App
         run: |
